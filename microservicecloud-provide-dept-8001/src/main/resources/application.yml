@@ -11,11 +11,12 @@ spring:
   appclication:
     name: microservicecloud-dept
   datasource:
-    type: com.alibaba.druid.pool.DruiDataSource       #当前数据源操作类型
-    driver-class-name: org.git.mm.msql.Driver         #MySQL驱动包
-    url: jdbc:mysql://localhost:3306/cloudD801        #数据库名称
+
+    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
+    driver-class-name: com.mysql.jdbc.Driver         #MySQL驱动包
+    url: jdbc:mysql://106.13.123.1:3306/clouddb01        #数据库名称
     username: root
-    password: 123456
+    password: Test@123
     dbcp2:
       min-idle: 5                                 #数据库连接池的最小维持连接数
       initial-size: 5                             #初始化链接

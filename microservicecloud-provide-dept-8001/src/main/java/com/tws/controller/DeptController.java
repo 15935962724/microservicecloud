@@ -1,6 +1,6 @@
 package com.tws.controller;
 
-import com.tws.dao.service.DeptService;
+import com.tws.service.DeptService;
 import com.tws.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

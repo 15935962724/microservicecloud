@@ -10,6 +10,7 @@
     <modules>
         <module>microservicecloud-api</module>
         <module>microservicecloud-provide-dept-8001</module>
+        <module>microservicecloud-consumer-dept-80</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -23,7 +24,7 @@
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.16</lombok.version>
         <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
-        <mysqlconnector.version>5.0.4</mysqlconnector.version>
+        <mysqlconnector.version>5.1.47</mysqlconnector.version>
         <!--   布局功能的支持程序 thymeleaf3主程序  适配layout2以上版本 -->
         <!-- thymeleaf2 适配layout1 -->
         <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>

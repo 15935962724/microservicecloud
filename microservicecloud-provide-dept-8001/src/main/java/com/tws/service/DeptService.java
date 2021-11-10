@@ -1,7 +1,6 @@
-package com.tws.dao.service;
+package com.tws.service;
 
 import com.tws.entity.Dept;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 

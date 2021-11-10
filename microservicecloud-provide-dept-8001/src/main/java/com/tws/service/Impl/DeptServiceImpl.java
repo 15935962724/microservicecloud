@@ -1,7 +1,7 @@
-package com.tws.dao.service.Impl;
+package com.tws.service.Impl;
 
 import com.tws.dao.DeptMapper;
-import com.tws.dao.service.DeptService;
+import com.tws.service.DeptService;
 import com.tws.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -7,7 +7,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml                 #mapper映射文件
 
 spring:
-  appclication:
+  application:
     name: microservicecloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
@@ -21,8 +21,21 @@ spring:
       max-toaal: 5                                #最大连接数
       max-wait-millis: 200                        #等待连接获取的最大超时时间
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka    # eureka server的地址
+  instance:
+      hostname: eureka
+      instance-id: microservicecloud-dept8001   #自定义主机服务名称信息
+      prefer-ip-address: true # 访问路径可以显示ip地址
 
+info :
+    app.name: tws-microservicecloud
+    company.name: www.tws.com
 
-
-
+    build.artifactId: $project.artifactId$
+    build.version: $project.version$
+    #build.artifactId: $project.artifactId$
+    #build.version: $project.version$     # 可以不加双引号
 

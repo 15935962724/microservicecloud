@@ -1,20 +1,20 @@
 server:
-    port: 7001
+    port: 7002
 
 eureka:
     #server-self-preservation: false //eureka 自我保护机制 关闭 不推荐
     instance:
-        hostname: eureka7001.com  #eureka 服务端的实例名称
+        hostname: eureka7002.com  #eureka 服务端的实例名称
     client:
         register-with-eureka: false #false 表示不向注册中心注册自己
         fetch-registry: false  #false 表示自己端就是注册中心，我的职责就是维护实例，并不需要检索服务
         service-url:
             #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka  #设置Eureka server交互的地址查询服务和注册服务都需要依赖这地址
-            defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/  #设置Eureka server交互的地址查询服务和注册服务都需要依赖这地址
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/  #设置Eureka server交互的地址查询服务和注册服务都需要依赖这地址
 
-spring:
-  application:
-    name: eurka-server
+#spring:
+#  application:
+#    name: eurka-server
 
 
 

@@ -1,0 +1,41 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml    #mybatis 配置文件所在路径
+  type-aliases-package: com.tws.entity                  #所有Entity别名类所在包
+  mapper-locations: classpath:mybatis/mapper/*.xml                 #mapper映射文件
+
+spring:
+  application:
+    name: microservicecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver         #MySQL驱动包
+    url: jdbc:mysql://106.13.123.1:3306/clouddb01?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true        #数据库名称
+    username: root
+    password: Test@123
+    dbcp2:
+      min-idle: 5                                 #数据库连接池的最小维持连接数
+      initial-size: 5                             #初始化链接
+      max-toaal: 5                                #最大连接数
+      max-wait-millis: 200                        #等待连接获取的最大超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/    # eureka server的地址
+  instance:
+      hostname: eureka
+      instance-id: microservicecloud-dept8001-hystrix   #自定义主机服务名称信息
+      prefer-ip-address: true # 访问路径可以显示ip地址
+
+info :
+    app.name: tws-microservicecloud
+    company.name: www.tws.com
+
+    build.artifactId: $project.artifactId$
+    build.version: $project.version$
+    #build.artifactId: $project.artifactId$
+    #build.version: $project.version$     # 可以不加双引号
+

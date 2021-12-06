@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Accessors(chain = true)
 public class Dept implements Serializable {
 
-    private Integer deptno;
+    private Long deptno;
 
     private String dname;
 
